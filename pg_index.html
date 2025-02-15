@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="pg_style.css">
+    <link rel="stylesheet" href="other_pg_css.css">
+    <script src="pg_app.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <div class="show-pass-box">
+        <span class="generated-pass">Password Will Show Here!</span>
+        <span class="copy-pass">Copy</span>
+    </div>
+    <div class="length">
+        <div class="PB-range-slider-div">
+            <input type="range" min="4" max="32" value="16" class="PB-range-slider" id="myRange">
+            <div class="len-num-btn">
+                <p class="PB-range-slidervalue">Length : 16</p>
+                <span class="btn">
+                    <button data-func="up" id="go-up">+</button>
+                    <button data-func="down" id="go-down">-</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="filters">
+        <div>
+            <span class="filter-class" data-info="A-Z">Uppercase Letters</span>
+            <span>
+                <div class="checkbox-wrapper-10">
+                  <input checked="" type="checkbox" id="up-filter" class="tgl tgl-flip">
+                  <label for="up-filter" data-tg-on="Yeah!" data-tg-off="Nope" class="tgl-btn"></label>
+                </div>
+            </span>
+        </div>
+        <div>
+            <span class="filter-class" data-info="0-9">Numbers</span>
+            <span>
+                <div class="checkbox-wrapper-10">
+                  <input checked="" type="checkbox" id="num-filter" class="tgl tgl-flip">
+                  <label for="num-filter" data-tg-on="Yeah!" data-tg-off="Nope" class="tgl-btn"></label>
+                </div>
+            </span>
+        </div>
+        <div>
+            <span class="filter-class" data-info="a-z">Lowercase Letters</span>
+            <span>
+                <div class="checkbox-wrapper-10">
+                  <input checked="" type="checkbox" id="low-filter" class="tgl tgl-flip">
+                  <label for="low-filter" data-tg-on="Yeah!" data-tg-off="Nope" class="tgl-btn"></label>
+                </div>
+            </span>
+        </div>
+        <div>
+            <span class="filter-class" data-info="@-#&_">Symbols</span>
+            <span>
+                <div class="checkbox-wrapper-10">
+                  <input checked="" type="checkbox" id="sym-filter" class="tgl tgl-flip">
+                  <label for="sym-filter" data-tg-on="Yeah!" data-tg-off="Nope" class="tgl-btn"></label>
+                </div>
+            </span>
+        </div>
+        <div>
+            <span class="filter-class" data-info="No Similar Character">Exclude Duplicate</span>
+            <span>
+                <div class="checkbox-wrapper-10">
+                  <input checked="" type="checkbox" id="ex-dup-filter" class="tgl tgl-flip">
+                  <label for="ex-dup-filter" data-tg-on="Yeah!" data-tg-off="Nope" class="tgl-btn"></label>
+                </div>
+            </span>
+        </div>
+
+    </div>
+    <div class="generate">
+        <button class="cssbuttons-io">
+            <span>Generate</span>
+        </button>
+    </div>
+</div>
+</body>
+</html>

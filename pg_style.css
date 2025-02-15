@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'LuckiestGuy';
+    src: url(font/DeliusUnicase-Regular.ttf);
+}
+@font-face {
+    font-family: 'RobotoMono';
+    src: url(font/RobotoMono-VariableFont_wght.ttf);
+}
+body{
+    font-family: 'LuckiestGuy', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #303030;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    box-shadow: 2px 2px 15px #919191;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 700px;
+    background-color: #cdcdcd;
+}
+
+.show-pass-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px #afafaf;
+}
+
+.generated-pass{
+    width: 80%;
+    text-align: center;
+    background-color: #8BC34A;
+    box-shadow: -3px 3px 10px #8BC34A;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    font-family: 'RobotoMono', serif;
+}
+
+.copy-pass{
+    cursor: pointer;
+    height: 100%;
+    transition: .3s .1s;
+    width: 20%;
+    text-align: center;
+    font-weight: bolder;
+}
+.copy-pass:hover{
+    color: #349cee;
+}
+.copied{
+    color: #349cee;
+}
+
+.length{
+    width: 90%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.PB-range-slider-div input{
+    width: 75%;
+}
+
+.PB-range-slider-div p{
+    width: max-content;
+}
+.len-num-btn{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+.btn button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 5px;
+    transition: .5s;
+}
+#go-up{
+    border: 3px solid #3f3f3f;
+    color: #3f3f3f;
+}
+#go-up:hover{
+    border: 3px solid #558B2F;
+    box-shadow: -2px 2px 20px #558B2F;
+    color: #558B2F;
+}
+#go-down{
+    border: 3px solid #3f3f3f;
+    color: #3f3f3f;
+}
+#go-down:hover{
+    border: 3px solid #F44336;
+    box-shadow: -2px 2px 20px #F44336;
+    color: #F44336;
+}
+
+.filters{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 10px 0 30px 0;
+}
+
+.filters div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.filters .filter-class{
+    position: relative;
+}
+
+.filters .filter-class:after{
+    position: absolute;
+    content: attr(data-info);
+    font-size: 11px;
+    background-color: #90CAF9;
+    padding: 5px;
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    width: max-content;
+    transition: .3s;
+    transition-delay: .15s;
+}
+
+.filters .filter-class:hover:after{
+    bottom: 22px;
+    opacity: 100;
+}
